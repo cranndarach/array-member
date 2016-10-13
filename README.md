@@ -1,6 +1,8 @@
 # array-member
 
-<span class="badge-npmversion"><a href="https://npmjs.org/package/array-member" title="View this project on NPM"><img src="https://img.shields.io/npm/v/array-member.svg" alt="NPM version" /></a></span>
+[![NPM](https://nodei.co/npm/array-member.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/array-member/)
+
+[![npm](https://img.shields.io/npm/v/array-member.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/array-member) [![license](https://img.shields.io/github/license/cranndarach/array-member.svg?maxAge=2592000?style=plastic)](https://github.com/cranndarach/array-member/blob/master/LICENSE)
 
 > Simple javascript module for node.js to test whether an object is a member of an array.
 
