@@ -1,6 +1,8 @@
 # array-member
 
-> Simple javascript module to test whether an object is a member of an array.
+<span class="badge-npmversion"><a href="https://npmjs.org/package/array-member" title="View this project on NPM"><img src="https://img.shields.io/npm/v/array-member.svg" alt="NPM version" /></a></span>
+
+> Simple javascript module for node.js to test whether an object is a member of an array.
 
 ## Installation
 
