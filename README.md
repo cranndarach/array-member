@@ -1,5 +1,9 @@
 # array-member
 
+[![NPM](https://nodei.co/npm/array-member.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/array-member/)
+
+[![npm](https://img.shields.io/npm/v/array-member.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/array-member) [![license](https://img.shields.io/github/license/cranndarach/array-member.svg?maxAge=2592000?style=plastic)](https://github.com/cranndarach/array-member/blob/master/LICENSE)
+
 > Javascript module to test for array/object membership.
 
 ## Installation
@@ -58,7 +62,7 @@ console.log(arrMember.objectValue("foo", myObj));
 This module consists of three functions:
 
 * `arrMember.member(item, array)` returns `true` if `item` is in `array`, and returns `false` otherwise.
-* `arrMember.objectKey(key, obj)` returns `true` if `key` is a name of a property in `obj`, and returns `false` otherwise.
+* `arrMember.objectKey(key, obj)` returns `true` if `key` is the name of a property in `obj`, and returns `false` otherwise.
 * `arrMember.objectValue(value, obj)` returns `true` if `value` is the value of a property in `obj`, and returns `false` otherwise.
 
 
