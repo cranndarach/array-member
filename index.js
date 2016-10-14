@@ -1,8 +1,74 @@
-exports.member = function(obj, arr) {
-    for(var i = 0; i < arr.length; i++) {
-        if(arr[i] == obj) {
+exports.member = function(item, arr) {
+    'use strict';
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == item) {
             return true;
         }
     }
     return false;
+}
+
+exports.objectKey = function(key, obj) {
+    'use strict';
+    var keys = Object.keys(obj);
+    for (let i = 0; i < keys.length; i++) {
+        if (keys[i] == key) {
+            return true;
+        }
+    }
+    return false;
+}
+
+exports.objectValue = function(value, obj) {
+    'use strict';
+    var keys = Object.keys(obj);
+    for (let i = 0; i < keys.length; i++) {
+        if (obj[keys[i]] == value) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+if (!Object.keys) {
+  Object.keys = (function() {
+    'use strict';
+    var hasOwnProperty = Object.prototype.hasOwnProperty,
+        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
+        dontEnums = [
+          'toString',
+          'toLocaleString',
+          'valueOf',
+          'hasOwnProperty',
+          'isPrototypeOf',
+          'propertyIsEnumerable',
+          'constructor'
+        ],
+        dontEnumsLength = dontEnums.length;
+
+    return function(obj) {
+      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
+        throw new TypeError('Object.keys called on non-object');
+      }
+
+      var result = [], prop, i;
+
+      for (prop in obj) {
+        if (hasOwnProperty.call(obj, prop)) {
+          result.push(prop);
+        }
+      }
+
+      if (hasDontEnumBug) {
+        for (i = 0; i < dontEnumsLength; i++) {
+          if (hasOwnProperty.call(obj, dontEnums[i])) {
+            result.push(dontEnums[i]);
+          }
+        }
+      }
+      return result;
+    };
+  }());
 }
