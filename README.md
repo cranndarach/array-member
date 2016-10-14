@@ -32,7 +32,7 @@ Test whether a string is a key for an object:
 ```javascript
 var arrMember = require('array-member');
 var myObj = {
-    abc: 123,
+    abc:123,
     test:"success",
     hello:"world"
 };
@@ -47,7 +47,7 @@ Test whether an object is a value in another object:
 ```javascript
 var arrMember = require('array-member');
 var myObj = {
-    abc: 123,
+    abc:123,
     test:"success",
     hello:"world"
 };
