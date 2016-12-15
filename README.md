@@ -70,11 +70,16 @@ This module consists of three functions:
 * `arrMember.member(item, array)` returns `true` if `item` is in `array`, and returns `false` otherwise.
 * `arrMember.objectKey(key, obj)` returns `true` if `key` is the name of a property in `obj`, and returns `false` otherwise.
 * `arrMember.objectValue(value, obj[, kind='full', caseSensitive=true])` returns `true` if `value` is the value of a property in `obj`, and returns `false` otherwise.
-    * `kind`: optional. Whether `value` should match the entire value (`'full'`), the beginning (`'begins'`), or any portion (`'contains'`). Defaults to `'full'`.
-    * `caseSensitive`: optional, logical. Whether matching should be case-sensitive or not. Defaults to `true`.
-    * Note: These options will be added to the other functions at some point.
+
+### Options
+* `kind`: optional. Whether `value`/`key`/`item` should match the entire item (`'full'`), the beginning (`'begins'`), or any portion (`'contains'`). Defaults to `'full'`.
+* `caseSensitive`: optional, logical. Whether matching should be case-sensitive or not. Defaults to `true`.
 
 ## Changelog
+
+### 1.2.x
+
+Add options to all functions. Changes to arrangement of module.
 
 ### 1.1.x
 
