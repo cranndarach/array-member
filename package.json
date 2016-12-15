@@ -1,6 +1,6 @@
 {
   "name": "array-member",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Test whether an object is a member of an array.",
   "main": "index.js",
   "scripts": {
