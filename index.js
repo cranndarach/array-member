@@ -19,12 +19,30 @@ exports.objectKey = function(key, obj) {
     return false;
 }
 
-exports.objectValue = function(value, obj) {
+exports.objectValue = function(value, obj, kind='full', caseSensitive=true) {
     'use strict';
+    var value = caseSensitive ? value : value.toLowerCase();
     var keys = Object.keys(obj);
     for (let i = 0; i < keys.length; i++) {
-        if (obj[keys[i]] == value) {
-            return true;
+        let check = caseSensitive ? obj[keys[i]] : obj[keys[i]].toLowerCase();
+        switch (kind) {
+          case 'contains':
+              if (check.search(value) !== -1) {
+                return true;
+              }
+              break;
+          case 'begins':
+              if (check.search(value) === 0) {
+                return true;
+              }
+              break;
+          case 'full':
+              if (check === value) {
+                return true;
+              }
+              break;
+          default:
+              throw new Error(`Unrecognized option kind='${kind}'. Please use 'full', 'contains', or 'begins'.`);
         }
     }
     return false;

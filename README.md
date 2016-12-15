@@ -51,10 +51,16 @@ var myObj = {
     test:"success",
     hello:"world"
 };
-// prints "true":
+// logs "true":
 console.log(arrMember.objectValue("success", myObj));
-// prints "false":
+// logs "false":
 console.log(arrMember.objectValue("foo", myObj));
+// logs "true":
+console.log(arrMember.objectValue("ess", myObj, kind="contains"));
+// logs "false":
+console.log(arrMember.objectValue("ess", myObj, kind="begins"));
+// logs "true":
+console.log(arrMember.objectValue("WORLD", myObj, caseSensitive=false));
 ```
 
 ## API
@@ -63,8 +69,16 @@ This module consists of three functions:
 
 * `arrMember.member(item, array)` returns `true` if `item` is in `array`, and returns `false` otherwise.
 * `arrMember.objectKey(key, obj)` returns `true` if `key` is the name of a property in `obj`, and returns `false` otherwise.
-* `arrMember.objectValue(value, obj)` returns `true` if `value` is the value of a property in `obj`, and returns `false` otherwise.
+* `arrMember.objectValue(value, obj[, kind='full', caseSensitive=true])` returns `true` if `value` is the value of a property in `obj`, and returns `false` otherwise.
+    * `kind`: optional. Whether `value` should match the entire value (`'full'`), the beginning (`'begins'`), or any portion (`'contains'`). Defaults to `'full'`.
+    * `caseSensitive`: optional, logical. Whether matching should be case-sensitive or not. Defaults to `true`.
+    * Note: These options will be added to the other functions at some point.
 
+## Changelog
+
+### 1.1.x
+
+Add options for type of matching and case-sensitivity to `objectValue()`.
 
 ## License
 
