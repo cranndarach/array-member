@@ -1,5 +1,5 @@
 exports.member = function(item, arr, kind='full', caseSensitive=true) {
-    'use strict';
+    // 'use strict';
     var item = caseSensitive ? item : item.toLowerCase();
     for (let i = 0; i < arr.length; i++) {
         if (searchItem(item, arr[i], kind, caseSensitive)) {
@@ -14,7 +14,7 @@ exports.member = function(item, arr, kind='full', caseSensitive=true) {
 }
 
 exports.objectKey = function(key, obj, kind='full', caseSensitive=true) {
-    'use strict';
+    // 'use strict';
     var key = caseSensitive ? key : key.toLowerCase();
     var keys = Object.keys(obj);
     for (let i = 0; i < keys.length; i++) {
@@ -29,7 +29,7 @@ exports.objectKey = function(key, obj, kind='full', caseSensitive=true) {
 }
 
 exports.objectValue = function(value, obj, kind='full', caseSensitive=true) {
-    'use strict';
+    // 'use strict';
     var value = caseSensitive ? value : value.toLowerCase();
     var keys = Object.keys(obj);
     for (let i = 0; i < keys.length; i++) {
