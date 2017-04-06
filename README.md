@@ -79,7 +79,10 @@ This module consists of three functions:
 
 ### 1.2.x
 
-Add options to all functions. Changes to arrangement of module.
+* Add options to all functions.
+* Changes to arrangement of module.
+* Fix typo.
+* Tidy code.
 
 ### 1.1.x
 

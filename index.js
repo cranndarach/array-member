@@ -1,6 +1,6 @@
 exports.member = function(item, arr, kind='full', caseSensitive=true) {
     // 'use strict';
-    var item = caseSensitive ? item : item.toLowerCase();
+    item = caseSensitive ? item : item.toLowerCase();
     for (let i = 0; i < arr.length; i++) {
         if (searchItem(item, arr[i], kind, caseSensitive)) {
             return true;
@@ -15,7 +15,7 @@ exports.member = function(item, arr, kind='full', caseSensitive=true) {
 
 exports.objectKey = function(key, obj, kind='full', caseSensitive=true) {
     // 'use strict';
-    var key = caseSensitive ? key : key.toLowerCase();
+    key = caseSensitive ? key : key.toLowerCase();
     var keys = Object.keys(obj);
     for (let i = 0; i < keys.length; i++) {
         if (searchItem(key, keys[i], kind, caseSensitive)) {
@@ -30,41 +30,21 @@ exports.objectKey = function(key, obj, kind='full', caseSensitive=true) {
 
 exports.objectValue = function(value, obj, kind='full', caseSensitive=true) {
     // 'use strict';
-    var value = caseSensitive ? value : value.toLowerCase();
+    value = caseSensitive ? value : value.toLowerCase();
     var keys = Object.keys(obj);
     for (let i = 0; i < keys.length; i++) {
         if (searchItem(value, obj[keys[i]], kind, caseSensitive)) {
             return true;
         }
-    //     let check = caseSensitive ? obj[keys[i]] : obj[keys[i]].toLowerCase();
-    //     switch (kind) {
-    //       case 'contains':
-    //           if (check.search(value) !== -1) {
-    //             return true;
-    //           }
-    //           break;
-    //       case 'begins':
-    //           if (check.search(value) === 0) {
-    //             return true;
-    //           }
-    //           break;
-    //       case 'full':
-    //           if (check === value) {
-    //             return true;
-    //           }
-    //           break;
-    //       default:
-    //           throw new Error(`Unrecognized option kind='${kind}'. Please use 'full', 'contains', or 'begins'.`);
-    //     }
     }
     return false;
 };
 
 function searchItem(searchFor, searchIn, kind, caseSensitive) {
-    var searchIn = caseSensitive ? searchIn : searchIn.toLowerCase();
+    searchIn = caseSensitive ? searchIn : searchIn.toLowerCase();
     switch (kind) {
         case 'contains':
-            if (earchIn.search(searchFor) !== -1) {
+            if (searchIn.search(searchFor) !== -1) {
               return true;
             }
            break;
